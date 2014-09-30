@@ -14,20 +14,20 @@ TODO: FOR NUMBERS DIVISIBLE BY 3 and 5 PRINT FOOBAR
 
 
 		for(var i = 0; i < 100; i++){
+			// Create list item 
 			var listItem = document.createElement("li");
-			//CODE BETWEEN
+			// populate list item
+			listItem.innerHTML = i;
 			if ((i % 3 === 0) && (i % 5 === 0)) {
-        		listItem.appendChild(document.createTextNode("foobar"));
+        		listItem.innerHTML = "foobar";
     		}
     		else if (i % 3 === 0) {
-        		listItem.appendChild(document.createTextNode("foo"));
+        		listItem.innerHTML = "foo";
     		}
     		else if (i % 5 === 0) {
-       			listItem.appendChild(document.createTextNode("bar"));
+       			listItem.innerHTML = "bar";
     		}
-    		else {
-        		listItem.appendChild(document.createTextNode(i));
-    		}
+			// add list item to list
 			list.appendChild(listItem);
 		}
 			
