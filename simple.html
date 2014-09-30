@@ -1,0 +1,41 @@
+<!-- 
+ALL CODE CAN BE DONE IN THIS FILE. PREFERABLBY BETWEEN THE COMMENTS LISTED BELOW. THIS FILE SHOULD WORK IN ANY BROWSER.
+TODO: FOR NUMBERS DIVISIBLE BY 3 PRINT FOO
+TODO: FOR NUMBERS DIVISIBLE BY 5 PRINT BAR
+TODO: FOR NUMBERS DIVISIBLE BY 3 and 5 PRINT FOOBAR
+-->
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>simple</title>
+	<script type="text/javascript">
+	function print(){
+	 	var list = document.getElementById("list");
+
+
+		for(var i = 0; i < 100; i++){
+			var listItem = document.createElement("li");
+			//CODE BETWEEN
+			if ((i % 3 === 0) && (i % 5 === 0)) {
+        		listItem.appendChild(document.createTextNode("foobar"));
+    		}
+    		else if (i % 3 === 0) {
+        		listItem.appendChild(document.createTextNode("foo"));
+    		}
+    		else if (i % 5 === 0) {
+       			listItem.appendChild(document.createTextNode("bar"));
+    		}
+    		else {
+        		listItem.appendChild(document.createTextNode(i));
+    		}
+			list.appendChild(listItem);
+		}
+			
+	}
+	</script>
+</head>
+<body id="simple" onload="print();">
+	<ul id="list">
+	</ul>
+</body>
+</html>
