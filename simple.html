@@ -8,34 +8,38 @@ TODO: FOR NUMBERS DIVISIBLE BY 3 and 5 PRINT FOOBAR
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<title>simple</title>
-	<script type="text/javascript">
-	function print(){
-	 	var list = document.getElementById("list");
-
-
-		for(var i = 0; i < 100; i++){
-			// Create list item 
-			var listItem = document.createElement("li");
-			// populate list item
-			listItem.innerHTML = i;
-			if ((i % 3 === 0) && (i % 5 === 0)) {
-        		listItem.innerHTML = "foobar";
-    		}
-    		else if (i % 3 === 0) {
-        		listItem.innerHTML = "foo";
-    		}
-    		else if (i % 5 === 0) {
-       			listItem.innerHTML = "bar";
-    		}
-			// add list item to list
-			list.appendChild(listItem);
-		}
-			
-	}
-	</script>
+	
 </head>
 <body id="simple" onload="print();">
 	<ul id="list">
 	</ul>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	function print(){
+	 	var list = $("#list");
+
+
+		for(var i = 0; i < 100; i++){
+			// Create list item 
+			var listItem = $("<li>");
+			// populate list item
+			listItem.html(i);
+			if ((i % 3 === 0) && (i % 5 === 0)) {
+        		listItem.html("foobar");
+    		}
+    		else if (i % 3 === 0) {
+        		listItem.html("foo");
+    		}
+    		else if (i % 5 === 0) {
+       			listItem.html("bar");
+    		}
+			// add list item to list
+			list.append(listItem);
+		}
+			
+	}
+	</script>
 </body>
 </html>
